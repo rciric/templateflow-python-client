@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.api &mdash; templateflow 0.4.1+4.g8e863fb documentation</title>
+  <title>templateflow.api &mdash; templateflow 0.4.1+12.g0123bd4 documentation</title>
   
 
   
@@ -177,9 +177,15 @@
 <span class="sd">        Index to an specific spatial resolution of the template.</span>
 <span class="sd">    suffix : str or None</span>
 <span class="sd">        BIDS suffix</span>
-<span class="sd">    atlas : str</span>
+<span class="sd">    atlas : str or None</span>
 <span class="sd">        Name of a particular atlas</span>
-<span class="sd">    desc : str</span>
+<span class="sd">    hemi : str or None</span>
+<span class="sd">        Hemisphere</span>
+<span class="sd">    space : str or None</span>
+<span class="sd">        Space template is mapped to</span>
+<span class="sd">    density : str or None</span>
+<span class="sd">        Surface density</span>
+<span class="sd">    desc : str or None</span>
 <span class="sd">        Description field</span>
 
 <span class="sd">    Examples</span>
@@ -194,6 +200,10 @@
 <span class="sd">    ...     &#39;MNI152Lin&#39;, suffix=&#39;T1w&#39;)]  # doctest: +ELLIPSIS +NORMALIZE_WHITESPACE</span>
 <span class="sd">    [&#39;.../tpl-MNI152Lin/tpl-MNI152Lin_res-01_T1w.nii.gz&#39;,</span>
 <span class="sd">     &#39;.../tpl-MNI152Lin/tpl-MNI152Lin_res-02_T1w.nii.gz&#39;]</span>
+
+<span class="sd">    &gt;&gt;&gt; str(get(&#39;fsLR&#39;, space=None, hemi=&#39;L&#39;,</span>
+<span class="sd">    ...         density=&#39;32k&#39;, suffix=&#39;sphere&#39;))  # doctest: +ELLIPSIS</span>
+<span class="sd">    &#39;.../tpl-fsLR_hemi-L_den-32k_sphere.surf.gii&#39;</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">out_file</span> <span class="o">=</span> <span class="p">[</span><span class="n">Path</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">TF_LAYOUT</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
