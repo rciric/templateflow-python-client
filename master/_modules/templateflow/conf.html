@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.conf &mdash; templateflow 0.4.1+12.g0123bd4 documentation</title>
+  <title>templateflow.conf &mdash; templateflow 0.4.2rc1+1.g054715d documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.4.1
+                0.4.2rc1
               </div>
             
           
@@ -155,10 +155,10 @@
 
 <h1>Source code for templateflow.conf</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Configuration and settings.&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="k">import</span> <span class="n">getenv</span>
-<span class="kn">from</span> <span class="nn">warnings</span> <span class="k">import</span> <span class="n">warn</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="k">import</span> <span class="n">resource_filename</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
+<span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">warn</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">resource_filename</span>
 
 <span class="n">TF_DEFAULT_HOME</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s1">&#39;.cache&#39;</span> <span class="o">/</span> <span class="s1">&#39;templateflow&#39;</span>
 <span class="n">TF_HOME</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;TEMPLATEFLOW_HOME&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">TF_DEFAULT_HOME</span><span class="p">)))</span>
@@ -177,7 +177,7 @@
 <span class="s2">&quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">TF_HOME</span><span class="p">,</span> <span class="ne">ResourceWarning</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">TF_USE_DATALAD</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="kn">from</span> <span class="nn">datalad.api</span> <span class="k">import</span> <span class="n">install</span>
+            <span class="kn">from</span> <span class="nn">datalad.api</span> <span class="kn">import</span> <span class="n">install</span>
         <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
             <span class="n">TF_USE_DATALAD</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">else</span><span class="p">:</span>
@@ -185,7 +185,7 @@
             <span class="n">install</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">source</span><span class="o">=</span><span class="n">TF_GITHUB_SOURCE</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">TF_USE_DATALAD</span><span class="p">:</span>
-        <span class="kn">from</span> <span class="nn">zipfile</span> <span class="k">import</span> <span class="n">ZipFile</span>
+        <span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
         <span class="n">TF_HOME</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">resource_filename</span><span class="p">(</span><span class="s1">&#39;templateflow&#39;</span><span class="p">,</span>
                                        <span class="s1">&#39;conf/templateflow-skel.zip&#39;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipref</span><span class="p">:</span>
@@ -201,7 +201,7 @@
         <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">if</span> <span class="n">TF_USE_DATALAD</span><span class="p">:</span>
-        <span class="kn">from</span> <span class="nn">datalad.api</span> <span class="k">import</span> <span class="n">update</span>
+        <span class="kn">from</span> <span class="nn">datalad.api</span> <span class="kn">import</span> <span class="n">update</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updating TemplateFlow&#39;s HOME using DataLad ...&quot;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">update</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -211,7 +211,7 @@
         <span class="k">return</span> <span class="kc">True</span>
 
     <span class="c1"># This is an S3 type of installation</span>
-    <span class="kn">from</span> <span class="nn">zipfile</span> <span class="k">import</span> <span class="n">ZipFile</span>
+    <span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
     <span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">resource_filename</span><span class="p">(</span><span class="s1">&#39;templateflow&#39;</span><span class="p">,</span>
                                    <span class="s1">&#39;conf/templateflow-skel.zip&#39;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipref</span><span class="p">:</span>
         <span class="n">allfiles</span> <span class="o">=</span> <span class="n">zipref</span><span class="o">.</span><span class="n">namelist</span><span class="p">()</span>
@@ -231,7 +231,7 @@
 
 <span class="n">TF_LAYOUT</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">.bids</span> <span class="k">import</span> <span class="n">Layout</span>
+    <span class="kn">from</span> <span class="nn">.bids</span> <span class="kn">import</span> <span class="n">Layout</span>
     <span class="n">TF_LAYOUT</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
         <span class="n">TF_HOME</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="s1">&#39;templateflow&#39;</span><span class="p">,</span>
         <span class="n">ignore</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;.git&#39;</span><span class="p">,</span> <span class="s1">&#39;.datalad&#39;</span><span class="p">,</span> <span class="s1">&#39;.gitannex&#39;</span><span class="p">,</span> <span class="s1">&#39;.gitattributes&#39;</span><span class="p">,</span> <span class="s1">&#39;scripts&#39;</span><span class="p">])</span>
@@ -272,7 +272,12 @@
     </span>
     <div class="rst-other-versions">
         <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../../0.4.2rc1/index.html">0.4.2rc1</a></dd>
+        </dl>
+        <dl>
             <dt>Branches</dt>
+            <dd><a href="../../../docs/index.html">docs</a></dd>
             <dd><a href="conf.html">master</a></dd>
         </dl>
     </div>

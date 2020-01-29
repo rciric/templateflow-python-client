@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.api module &mdash; templateflow 0.4.1+12.g0123bd4 documentation</title>
+  <title>templateflow.api module &mdash; templateflow 0.4.2rc1+1.g054715d documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.4.1
+                0.4.2rc1
               </div>
             
           
@@ -189,21 +189,21 @@
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;T1w&#39;</span><span class="p">))</span>  
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;T1w&#39;</span><span class="p">))</span>  
 <span class="go">&#39;.../tpl-MNI152Lin/tpl-MNI152Lin_res-01_T1w.nii.gz&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;T1w&#39;</span><span class="p">))</span>  
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;T1w&#39;</span><span class="p">))</span>  
 <span class="go">&#39;.../tpl-MNI152Lin/tpl-MNI152Lin_res-02_T1w.nii.gz&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">get</span><span class="p">(</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">get</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;T1w&#39;</span><span class="p">)]</span>  
 <span class="go">[&#39;.../tpl-MNI152Lin/tpl-MNI152Lin_res-01_T1w.nii.gz&#39;,</span>
 <span class="go"> &#39;.../tpl-MNI152Lin/tpl-MNI152Lin_res-02_T1w.nii.gz&#39;]</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fsLR&#39;</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hemi</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fsLR&#39;</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hemi</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span>
 <span class="gp">... </span>        <span class="n">density</span><span class="o">=</span><span class="s1">&#39;32k&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;sphere&#39;</span><span class="p">))</span>  
 <span class="go">&#39;.../tpl-fsLR_hemi-L_den-32k_sphere.surf.gii&#39;</span>
 </pre></div>
@@ -220,7 +220,7 @@
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">)[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">)[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span>
 <span class="go">&#39;Linear ICBM Average Brain (ICBM152) Stereotaxic Registration Model&#39;</span>
 </pre></div>
 </div>
@@ -241,13 +241,13 @@
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">base</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="s1">&#39;MNI152NLin2009cAsym&#39;</span><span class="p">,</span> <span class="s1">&#39;NKI&#39;</span><span class="p">,</span> <span class="s1">&#39;OASIS30ANTs&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">base</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MNI152Lin&#39;</span><span class="p">,</span> <span class="s1">&#39;MNI152NLin2009cAsym&#39;</span><span class="p">,</span> <span class="s1">&#39;NKI&#39;</span><span class="p">,</span> <span class="s1">&#39;OASIS30ANTs&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tpls</span> <span class="o">=</span> <span class="n">templates</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">all</span><span class="p">([</span><span class="n">t</span> <span class="ow">in</span> <span class="n">tpls</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">base</span><span class="p">])</span>
 <span class="go">True</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">templates</span><span class="p">(</span><span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;PD&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">templates</span><span class="p">(</span><span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;PD&#39;</span><span class="p">)</span>
 <span class="go">[&#39;MNI152Lin&#39;, &#39;MNI152NLin2009cAsym&#39;, &#39;MNIInfant&#39;, &#39;MNIPediatricAsym&#39;]</span>
 </pre></div>
 </div>
@@ -296,7 +296,12 @@
     </span>
     <div class="rst-other-versions">
         <dl>
+            <dt>Tags</dt>
+            <dd><a href="../0.4.2rc1/api/templateflow.api.html">0.4.2rc1</a></dd>
+        </dl>
+        <dl>
             <dt>Branches</dt>
+            <dd><a href="../docs/api/templateflow.api.html">docs</a></dd>
             <dd><a href="../master/api/templateflow.api.html">master</a></dd>
         </dl>
     </div>
