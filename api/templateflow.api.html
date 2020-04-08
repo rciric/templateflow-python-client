@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.api module &mdash; templateflow 0.5.2 documentation</title>
+  <title>templateflow.api module &mdash; templateflow 0.5.2+3.gb4d1290 documentation</title>
   
 
   
@@ -162,18 +162,15 @@
   
 
 
-    
-    
 
 
 
-    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../master/api/templateflow.api.html"><b>Warning:</b> This document is for an old version of templateflow. The main version is master.</a></p>
 <div class="section" id="module-templateflow.api">
 <span id="templateflow-api-module"></span><h1>templateflow.api module<a class="headerlink" href="#module-templateflow.api" title="Permalink to this headline">¶</a></h1>
 <p>TemplateFlow’s Python Client</p>
-<dl class="function">
+<dl class="py function">
 <dt id="templateflow.api.get">
-<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">template</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch one file from one particular template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -213,9 +210,9 @@
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="templateflow.api.get_metadata">
-<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">get_metadata</code><span class="sig-paren">(</span><em class="sig-param">template</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#get_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.get_metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">get_metadata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#get_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.get_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch one file from one template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -229,9 +226,9 @@
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="templateflow.api.templates">
-<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">templates</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#templates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.templates" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">templates</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#templates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.templates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a list of available templates.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Keyword Arguments</dt>
@@ -251,7 +248,7 @@
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">templates</span><span class="p">(</span><span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;PD&#39;</span><span class="p">)</span>
-<span class="go">[&#39;MNI152Lin&#39;, &#39;MNI152NLin2009cAsym&#39;, &#39;MNIInfant&#39;, &#39;MNIPediatricAsym&#39;]</span>
+<span class="go">[&#39;MNI152Lin&#39;, &#39;MNI152NLin2009cAsym&#39;, &#39;MNI152NLin2009cSym&#39;, &#39;MNIInfant&#39;, &#39;MNIPediatricAsym&#39;]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -296,7 +293,7 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Other Versions</span>
-        v: 0.5.2
+        v: master
         <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
