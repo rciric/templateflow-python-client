@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.conf &mdash; templateflow 0.6.0rc1+19.g2bcf4db documentation</title>
+  <title>templateflow.conf &mdash; templateflow 0.6.0rc1+21.g79cc94f documentation</title>
   
 
   
@@ -164,21 +164,30 @@
 <span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">warn</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="n">TF_DEFAULT_HOME</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s1">&#39;.cache&#39;</span> <span class="o">/</span> <span class="s1">&#39;templateflow&#39;</span>
-<span class="n">TF_HOME</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;TEMPLATEFLOW_HOME&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">TF_DEFAULT_HOME</span><span class="p">)))</span>
-<span class="n">TF_GITHUB_SOURCE</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/templateflow/templateflow.git&#39;</span>
-<span class="n">TF_S3_ROOT</span> <span class="o">=</span> <span class="s1">&#39;https://templateflow.s3.amazonaws.com&#39;</span>
-<span class="n">TF_USE_DATALAD</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;TEMPLATEFLOW_USE_DATALAD&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span>
-    <span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="s1">&#39;on&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">TF_DEFAULT_HOME</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;.cache&quot;</span> <span class="o">/</span> <span class="s2">&quot;templateflow&quot;</span>
+<span class="n">TF_HOME</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TEMPLATEFLOW_HOME&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">TF_DEFAULT_HOME</span><span class="p">)))</span>
+<span class="n">TF_GITHUB_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/templateflow/templateflow.git&quot;</span>
+<span class="n">TF_S3_ROOT</span> <span class="o">=</span> <span class="s2">&quot;https://templateflow.s3.amazonaws.com&quot;</span>
+<span class="n">TF_USE_DATALAD</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TEMPLATEFLOW_USE_DATALAD&quot;</span><span class="p">,</span> <span class="s2">&quot;false&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span>
+    <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;y&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="n">TF_CACHED</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">TF_HOME</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">(</span><span class="n">TF_HOME</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
     <span class="n">TF_CACHED</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
-<span class="s2">TemplateFlow: repository not found at </span><span class="si">%s</span><span class="s2">. Populating a new TemplateFlow stub.</span>
-<span class="s2">If the path reported above is not the desired location for TemplateFlow, </span><span class="se">\</span>
-<span class="s2">please set the TEMPLATEFLOW_HOME environment variable.</span><span class="se">\</span>
-<span class="s2">&quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">TF_HOME</span><span class="p">,</span> <span class="ne">ResourceWarning</span><span class="p">)</span>
+    <span class="n">warn</span><span class="p">(</span>
+        <span class="sd">&quot;&quot;&quot;\</span>
+<span class="sd">TemplateFlow: repository not found at %s. Populating a new TemplateFlow stub.</span>
+<span class="sd">If the path reported above is not the desired location for TemplateFlow, \</span>
+<span class="sd">please set the TEMPLATEFLOW_HOME environment variable.\</span>
+<span class="sd">&quot;&quot;&quot;</span>
+        <span class="o">%</span> <span class="n">TF_HOME</span><span class="p">,</span>
+        <span class="ne">ResourceWarning</span><span class="p">,</span>
+    <span class="p">)</span>
     <span class="k">if</span> <span class="n">TF_USE_DATALAD</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">datalad.api</span> <span class="kn">import</span> <span class="n">install</span>
@@ -190,6 +199,7 @@
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">TF_USE_DATALAD</span><span class="p">:</span>
         <span class="kn">from</span> <span class="nn">._s3</span> <span class="kn">import</span> <span class="n">update</span> <span class="k">as</span> <span class="n">_update_s3</span>
+
         <span class="n">_update_s3</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">,</span> <span class="n">local</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
@@ -199,21 +209,25 @@
         <span class="k">return</span> <span class="kc">True</span>
 
     <span class="kn">from</span> <span class="nn">._s3</span> <span class="kn">import</span> <span class="n">update</span> <span class="k">as</span> <span class="n">_update_s3</span>
+
     <span class="k">return</span> <span class="n">_update_s3</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">,</span> <span class="n">local</span><span class="o">=</span><span class="n">local</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="setup_home"><a class="viewcode-back" href="../../api/templateflow.conf.html#templateflow.conf.setup_home">[docs]</a><span class="k">def</span> <span class="nf">setup_home</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Initialize/update TF&#39;s home if necessary.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">force</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">TF_CACHED</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
 <span class="s2">TemplateFlow was not cached (TEMPLATEFLOW_HOME=</span><span class="si">{</span><span class="n">TF_HOME</span><span class="si">}</span><span class="s2">), </span><span class="se">\</span>
-<span class="s2">a fresh initialization was done.&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">a fresh initialization was done.&quot;&quot;&quot;</span>
+        <span class="p">)</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="n">update</span><span class="p">(</span><span class="n">local</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
 
 <span class="k">def</span> <span class="nf">_update_datalad</span><span class="p">():</span>
     <span class="kn">from</span> <span class="nn">datalad.api</span> <span class="kn">import</span> <span class="n">update</span>
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updating TEMPLATEFLOW_HOME using DataLad ...&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">update</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -225,9 +239,20 @@
 <span class="n">TF_LAYOUT</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">.bids</span> <span class="kn">import</span> <span class="n">Layout</span>
+
     <span class="n">TF_LAYOUT</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
-        <span class="n">TF_HOME</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="s1">&#39;templateflow&#39;</span><span class="p">,</span>
-        <span class="n">ignore</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;.git&#39;</span><span class="p">,</span> <span class="s1">&#39;.datalad&#39;</span><span class="p">,</span> <span class="s1">&#39;.gitannex&#39;</span><span class="p">,</span> <span class="s1">&#39;.gitattributes&#39;</span><span class="p">,</span> <span class="s1">&#39;.github&#39;</span><span class="p">,</span> <span class="s1">&#39;scripts&#39;</span><span class="p">])</span>
+        <span class="n">TF_HOME</span><span class="p">,</span>
+        <span class="n">validate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">config</span><span class="o">=</span><span class="s2">&quot;templateflow&quot;</span><span class="p">,</span>
+        <span class="n">ignore</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;.git&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;.datalad&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;.gitannex&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;.gitattributes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;.github&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;scripts&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
