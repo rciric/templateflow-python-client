@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About &mdash; templateflow 0.6.0rc2.dev33+gdff7efe documentation</title>
+  <title>About &mdash; templateflow 0.6.0rc3.dev1+g30a76aa documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.6.0rc2.dev33
+                0.6.0rc3.dev1
               </div>
             
           
@@ -160,15 +160,15 @@
 
 <div class="section" id="about">
 <h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p>Group inference and reporting of neuroimaging studies require that individual’s
-features are spatially aligned into a common frame where their location can be
-called standard.
-To that end, a multiplicity of brain templates with anatomical annotations
-(i.e., atlases) have been published.
-However, a centralized resource that allows programmatic access to templates is
-lacking.
-TemplateFlow is a modular, version-controlled resource that allows researchers
-to use templates “off-the-shelf” and share new ones.</p>
+<p><a class="reference external" href="https://doi.org/10.5281/zenodo.2583289"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.2583289.svg" /></a> <a class="reference external" href="https://circleci.com/gh/templateflow/python-client/tree/master"><img alt="CircleCI" src="https://circleci.com/gh/templateflow/python-client/tree/master.svg?style=shield" /></a> <a class="reference external" href="https://travis-ci.org/templateflow/python-client"><img alt="Build Status" src="https://travis-ci.org/templateflow/python-client.svg?branch=master" /></a> <a class="reference external" href="https://pypi.python.org/pypi/templateflow/"><img alt="Pypi" src="https://img.shields.io/pypi/v/templateflow.svg" /></a></p>
+<p>Group inference and reporting of neuroimaging studies require that
+individual’s features are spatially aligned into a common frame where
+their location can be called standard. To that end, a multiplicity of
+brain templates with anatomical annotations (i.e., atlases) have been
+published. However, a centralized resource that allows programmatic
+access to templates is lacking. TemplateFlow is a modular,
+version-controlled resource that allows researchers to use templates
+“off-the-shelf” and share new ones.</p>
 </div>
 <div class="section" id="contents">
 <h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
@@ -213,11 +213,30 @@ to use templates “off-the-shelf” and share new ones.</p>
 </div>
 <div class="section" id="what-s-new">
 <h1>What’s new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="april-7-2020">
-<h2>0.6.0 (April 7, 2020)<a class="headerlink" href="#april-7-2020" title="Permalink to this headline">¶</a></h2>
-<p>Minor relase in preparation of a new CalVer versioning following the lead of
-<em>fMRIPrep</em>. This release is hooked to TemplateFlow 1.4.0.
-With thanks to V. Fonov for contributing the new <code class="docutils literal notranslate"><span class="pre">tpl-MNI152NLin2009cSym</span></code>.</p>
+<div class="section" id="tbd">
+<h2>0.6.0 (TBD)<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
+<p>Minor relase in preparation of a new CalVer versioning
+following the lead of <em>fMRIPrep</em>.
+This release contains a fair amount of maintenance work to
+ensure synchronizity with the TemplateFlow archive
+(<a class="reference external" href="https://github.com/templateflow/templateflow">https://github.com/templateflow/templateflow</a>).
+These maintenance actions drive the development towards
+establishing a peer-reviewed, lightweight template submission
+protocol.
+With thanks to V. Fonov for contributing the new
+<code class="docutils literal notranslate"><span class="pre">tpl-MNI152NLin2009cSym</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ENH: Update the internal index of <em>TemplateFlow</em> (#40)</p></li>
+<li><p>ENH: Automatic generation of template citations (#35)</p></li>
+<li><p>MAINT: Set-up a GitHub action to test installation
+alternatives (see #23).</p></li>
+<li><p>MAINT: Migrate to <code class="docutils literal notranslate"><span class="pre">setuptools_scm</span></code> (#42)</p></li>
+<li><p>MAINT: Run black on the whole tree (#41)</p></li>
+<li><p>MAINT: Transfer the burden of keeping skeleton updated
+over to the archive (#39)</p></li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="march-20-2020">
 <h2>0.5.2 (March 20, 2020)<a class="headerlink" href="#march-20-2020" title="Permalink to this headline">¶</a></h2>
