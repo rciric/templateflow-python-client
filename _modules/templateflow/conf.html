@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.conf &mdash; templateflow 0.6.0rc2 documentation</title>
+  <title>templateflow.conf &mdash; templateflow 0.6.0rc3.dev12+g7a08e40 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.6.0rc2
+                0.6.0rc3.dev12
               </div>
             
           
@@ -152,12 +152,9 @@
   
 
 
-    
-    
 
 
 
-    <p class="scv-banner scv-sphinx_rtd_theme"><b>Warning:</b> This document is for an old version of templateflow.</p>
 <h1>Source code for templateflow.conf</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Configuration and settings.&quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
@@ -230,7 +227,7 @@
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updating TEMPLATEFLOW_HOME using DataLad ...&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">update</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">update</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error updating TemplateFlow&#39;s home directory (using DataLad): </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">True</span>
@@ -285,7 +282,7 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Other Versions</span>
-        v: 0.6.0rc2
+        v: master
         <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -299,11 +296,11 @@
             <dd><a href="../../0.5.1rc1/index.html">0.5.1rc1</a></dd>
             <dd><a href="../../0.5.2/index.html">0.5.2</a></dd>
             <dd><a href="../../0.6.0rc1/index.html">0.6.0rc1</a></dd>
-            <dd><a href="../../0.6.0rc2/_modules/templateflow/conf.html">0.6.0rc2</a></dd>
+            <dd><a href="../../0.6.0rc2/index.html">0.6.0rc2</a></dd>
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../../master/index.html">master</a></dd>
+            <dd><a href="../../master/_modules/templateflow/conf.html">master</a></dd>
         </dl>
     </div>
 </div>

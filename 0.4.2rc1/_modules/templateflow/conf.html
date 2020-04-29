@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.conf &mdash; templateflow 0.6.0rc2 documentation</title>
+  <title>templateflow.conf &mdash; templateflow 0.6.0rc3.dev12+g7a08e40 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.6.0rc2
+                0.6.0rc3.dev12
               </div>
             
           
@@ -228,7 +228,7 @@
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updating TEMPLATEFLOW_HOME using DataLad ...&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">update</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">update</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">TF_HOME</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error updating TemplateFlow&#39;s home directory (using DataLad): </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">True</span>
