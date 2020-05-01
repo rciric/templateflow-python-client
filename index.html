@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About &mdash; templateflow 0.6.0rc3.dev20+g6a024f4 documentation</title>
+  <title>About &mdash; templateflow 0.6.0 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.6.0rc3.dev20
+                0.6.0
               </div>
             
           
@@ -155,9 +155,12 @@
   
 
 
+    
+    
 
 
 
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="master/index.html"><b>Warning:</b> This document is for an old version of templateflow. The main version is master.</a></p>
 <div class="section" id="about">
 <h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://doi.org/10.5281/zenodo.2583289"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.2583289.svg" /></a> <a class="reference external" href="https://circleci.com/gh/templateflow/python-client/tree/master"><img alt="CircleCI" src="https://circleci.com/gh/templateflow/python-client/tree/master.svg?style=shield" /></a> <a class="reference external" href="https://travis-ci.org/templateflow/python-client"><img alt="Build Status" src="https://travis-ci.org/templateflow/python-client.svg?branch=master" /></a> <a class="reference external" href="https://pypi.python.org/pypi/templateflow/"><img alt="Pypi" src="https://img.shields.io/pypi/v/templateflow.svg" /></a></p>
@@ -213,19 +216,22 @@ version-controlled resource that allows researchers to use templates
 </div>
 <div class="section" id="what-s-new">
 <h1>What’s new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="tbd">
-<h2>0.6.0 (TBD)<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="may-1st-2020">
+<h2>0.6.0 (May 1st, 2020)<a class="headerlink" href="#may-1st-2020" title="Permalink to this headline">¶</a></h2>
 <p>Minor release in preparation of a new CalVer versioning following the lead of <em>fMRIPrep</em>.
-This release contains a fair amount of maintenance work to ensure synchronicity with the TemplateFlow archive (<a class="reference external" href="https://github.com/templateflow/templateflow">https://github.com/templateflow/templateflow</a>). These maintenance actions drive the development towards establishing a peer-reviewed, lightweight template submission protocol.
+This release contains a fair amount of maintenance work to ensure synchronicity with the TemplateFlow Archive (<a class="reference external" href="https://github.com/templateflow/templateflow">https://github.com/templateflow/templateflow</a>). These maintenance actions drive the development towards establishing a peer-reviewed, lightweight template submission protocol. The release includes an update mechanism, enabling users of the <em>S3-backed mode of operation</em> (default) to update their local Archive structure without reinstalling the client. This feature is enabled by default on import time, to disable it make sure you export <code class="docutils literal notranslate"><span class="pre">TEMPLATEFLOW_AUTOUPDATE=off</span></code>.
+With thanks to Yarik for a datalad-related bug-fix.
 With thanks to V. Fonov for contributing with the new <code class="docutils literal notranslate"><span class="pre">tpl-MNI152NLin2009cSym</span></code>.</p>
 <blockquote>
 <div><ul class="simple">
+<li><p>FIX: Provide path to the dataset as <code class="docutils literal notranslate"><span class="pre">dataset</span></code> argument (#48)</p></li>
+<li><p>ENH: Run an automatic S3-skeleton update on import by default (#45)</p></li>
 <li><p>ENH: Update the internal index of <em>TemplateFlow</em> (#40)</p></li>
 <li><p>ENH: Automatic generation of template citations (#35)</p></li>
 <li><p>MAINT: Set-up a GitHub action to test installation alternatives (see #23).</p></li>
 <li><p>MAINT: Migrate to <code class="docutils literal notranslate"><span class="pre">setuptools_scm</span></code> (#42)</p></li>
-<li><p>MAINT: Run black on the whole tree (#41)</p></li>
-<li><p>MAINT: Transfer the burden of keeping skeleton updated over to the archive (#39)</p></li>
+<li><p>MAINT: Run <code class="docutils literal notranslate"><span class="pre">black</span></code> on the whole tree (#41)</p></li>
+<li><p>MAINT: Transfer the burden of keeping the S3-skeleton updated over to the archive (#39)</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -439,7 +445,7 @@ Also includes minor reliability improvements over the previous release and some 
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Other Versions</span>
-        v: master
+        v: 0.6.0
         <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -452,6 +458,7 @@ Also includes minor reliability improvements over the previous release and some 
             <dd><a href="0.5.1/index.html">0.5.1</a></dd>
             <dd><a href="0.5.1rc1/index.html">0.5.1rc1</a></dd>
             <dd><a href="0.5.2/index.html">0.5.2</a></dd>
+            <dd><a href="0.6.0/index.html">0.6.0</a></dd>
             <dd><a href="0.6.0rc1/index.html">0.6.0rc1</a></dd>
             <dd><a href="0.6.0rc2/index.html">0.6.0rc2</a></dd>
         </dl>
