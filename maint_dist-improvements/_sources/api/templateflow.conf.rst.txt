@@ -1,0 +1,15 @@
+templateflow.conf package
+=========================
+
+.. automodule:: templateflow.conf
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   templateflow.conf.bids
