@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>templateflow.api module &mdash; templateflow 0.6.4.dev8+g1de3c71 documentation</title>
+  <title>templateflow.api module &mdash; templateflow 0.6.4.dev10+g6793f58 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.6.4.dev8
+                0.6.4.dev10
               </div>
             
           
@@ -176,11 +176,14 @@
 <p>TemplateFlow’s Python Client.</p>
 <dl class="py function">
 <dt id="templateflow.api.get">
-<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">templateflow.api.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span></em>, <em class="sig-param"><span class="n">raise_empty</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/templateflow/api.html#get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#templateflow.api.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch one file from one particular template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>template</strong> (<em>str</em>) – A template identifier (e.g., <code class="docutils literal notranslate"><span class="pre">MNI152NLin2009cAsym</span></code>).</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template</strong> (<em>str</em>) – A template identifier (e.g., <code class="docutils literal notranslate"><span class="pre">MNI152NLin2009cAsym</span></code>).</p></li>
+<li><p><strong>raise_empty</strong> (<em>bool, optional</em>) – Raise exception if no files were matched</p></li>
+</ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
@@ -212,6 +215,16 @@
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fsLR&#39;</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hemi</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span>
 <span class="gp">... </span>        <span class="n">density</span><span class="o">=</span><span class="s1">&#39;32k&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;sphere&#39;</span><span class="p">))</span>  
 <span class="go">&#39;.../tpl-fsLR_hemi-L_den-32k_sphere.surf.gii&#39;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fsLR&#39;</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="s1">&#39;madeup&#39;</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fsLR&#39;</span><span class="p">,</span> <span class="n">raise_empty</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="s1">&#39;madeup&#39;</span><span class="p">)</span>  
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">Exception</span>:
+<span class="gp">...</span>
 </pre></div>
 </div>
 </dd></dl>
